@@ -44,7 +44,6 @@ public class Guess {
 		} else {
 			System.out.println("猜大了");
 		}
-		
 		return false;
 	}
 	public static void main(String[] args) {
