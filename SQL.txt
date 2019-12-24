@@ -1,0 +1,37 @@
+create table class
+（
+clid int primary key,
+clname varchar(20)
+);
+
+create table student
+（
+sn int primary,
+sname varchar(20),
+);
+
+create table course
+（
+cid int primary key,
+cname varchar(20)
+);
+
+create table teacher
+（
+tid int primary key，
+tname varchar(20),
+);
+
+create table grade
+(
+cid int prinary key,
+sn int primary key,
+double score
+);
+
+create table teach
+(
+tid int,
+cid int,
+primary key(tid,cid)
+)
