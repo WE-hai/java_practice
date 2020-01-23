@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Main {
+public class ArrayTest {
     public static int[] createArray(int n) {
         // 运行使用变量作为数组的长度
         return new int[n];
@@ -94,14 +94,14 @@ public class Main {
         printArray(a);
         printArray(new int[] { 3, 5, 2, 7, 9, 4, 8 });
 
-		int[] arr = { 4, 2, 1, 9, 8, 3, 7 };
-		System.out.println(max1(arr));
-		System.out.println(max2(arr));
-		System.out.println(average(arr));
+        int[] arr = { 4, 2, 1, 9, 8, 3, 7 };
+        System.out.println(max1(arr));
+        System.out.println(max2(arr));
+        System.out.println(average(arr));
 
-		int[] b = { 5, 1, 2, 4, 3, 8, 5, 2 };
-		System.out.println(indexOf(b, 5));
-		System.out.println(lastIndexOf(b, 5));
+        int[] b = { 5, 1, 2, 4, 3, 8, 5, 2 };
+        System.out.println(indexOf(b, 5));
+        System.out.println(lastIndexOf(b, 5));
 
         int[] array = { 1, 3, 4, 2, 6 };
         int[] b1 = copyOfRange(a, 1, 3);
