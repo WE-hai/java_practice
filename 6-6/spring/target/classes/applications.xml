@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--定义bean对象-->
+    <bean id="duck1" class="wei.model.Duck">
+        <property name="name" value="Tom"/>
+        <property name="age" value="10"/>
+    </bean>
+    <!--通过有参的构造方法定义bean对象-->
+    <bean id="duck2" class="wei.model.Duck" scope="prototype">
+        <constructor-arg name="name" value="abc"/>
+        <constructor-arg name="age" value="2"/>
+    </bean>
+
+    <!--通过引用已有的bean对象：ref-->
+    <bean id="duckstore" class="wei.model.DuckStore">
+        <property name="ducks">
+            <list>
+                <ref bean="duck1"/>
+                <ref bean="duck2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="p1" class="wei.model.Person">
+        <property name="duck" ref="duck1"/>
+    </bean>
+
+
+    <bean id="duck3" class="wei.model.DuckFactory" factory-method="create"></bean>
+</beans>
