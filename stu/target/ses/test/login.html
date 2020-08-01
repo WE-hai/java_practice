@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 不加base，默认以当前html请求路径作为相对，加上base就是以base的路径作为相对位置 -->
+    <base href="../">
+    <title>用户登录</title>
+</head>
+<body>
+<form id="login_form">
+    <input id="username" type="text" name="username" placeholder="请输入用户名">
+    <br>
+    <input id="password" type="password" name="password" placeholder="请输入密码">
+    <br>
+    <input type="submit" value="提交">
+</form>
+
+<script src="static/jquery@3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#login_form").submit(function () {
+            let data = {
+                username: $("#username").val(),
+                password: $("#password").val()
+            };
+            $.ajax({
+                type: 'post',
+                url: "user/login",
+                contentType: "application/json",
+                data: JSON.stringify(data),
+                success: function () {
+                    // showSuccessModal("登录成功", function () {
+                    //     window.location.href = "public/page/main.html";
+                    // });
+                    alert("登录成功")
+                },
+                error: function (error) {
+                    // $(form).removeClass("was-validated");
+                    // $("#login_error").html(error.message);
+                    // $("#login_error").show();
+                    alert("登录失败")
+                }
+            })
+            return false;
+        })
+    })
+</script>
+</body>
+</html>
