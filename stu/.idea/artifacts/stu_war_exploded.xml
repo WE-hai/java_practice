@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="stu:war exploded">
+    <output-path>$PROJECT_DIR$/target/ses</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="stu" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.9" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.9" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/ses/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="stu/web/Web" />
+    </root>
+  </artifact>
+</component>
