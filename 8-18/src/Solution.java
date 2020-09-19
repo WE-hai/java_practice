@@ -9,6 +9,6 @@ public class Solution {
    }
 
     public int JumpFloorII2(int target) {
-            return 1 <<(target - 1);
+        return 1 <<(target - 1);
     }
 }

@@ -1,3 +1,5 @@
+import 编程题1.Main;
+
 public class Solution {
 	public int daycost (int len, int m, int n) {
 		int[] dp = new int[len];
