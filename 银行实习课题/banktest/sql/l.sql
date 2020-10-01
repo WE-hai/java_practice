@@ -1,0 +1,2 @@
+select user.age 年龄,li.product 理财产品 from user,li where user.id = li.id and user.age = '21-25岁';
+select user.age 年龄,li.product 理财产品 from user,li where user.id = li.id and user.age != '21-25岁' and user.age != '20岁及以下';
