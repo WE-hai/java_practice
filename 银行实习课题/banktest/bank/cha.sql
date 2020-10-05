@@ -1,0 +1,2 @@
+select DISTINCT JJHD_ACCINFO_CS.username 姓名,JJHD_BATCHDTL_CS.age 年龄,accnotes 存款种类 from JJHD_ACCINFO_CS,JJHD_BATCHDTL_CS where accnotes != 'no' and accnotes != 'current' and JJHD_ACCINFO_CS.userno = JJHD_BATCHDTL_CS.userno;
+select DISTINCT JJHD_ACCINFO_CS.username 姓名,JJHD_BATCHDTL_CS.age 年龄,JJHD_BATCHDTL_CS.idno 身份证号,JJHD_FININFO_CS.proname 理财产品 from JJHD_ACCINFO_CS,JJHD_FININFO_CS,JJHD_BATCHDTL_CS where JJHD_ACCINFO_CS.userno = JJHD_FININFO_CS.userno and JJHD_FININFO_CS.userno = JJHD_BATCHDTL_CS.userno; 
