@@ -7,10 +7,12 @@ import java.util.Queue;
 public class Solution {
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<>();
-        if(root == null)return result;
+        if(root == null) {
+            return result;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty()) {
             TreeNode temp = queue.poll();
             result.add(temp.val);
             if(temp.left != null) {
